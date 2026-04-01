@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷调查</title>
+    <style>
+        body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.question {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.question h2 {
+    font-size: 2em;
+}
+
+.options {
+    margin-top: 20px;
+    display: block;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.options img {
+    margin-left: 20px;
+    width: 256px;
+    height: 256px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 class="title">问卷调查</h1>
+    <h4>请您仔细听取完各段音频1-10，最好戴上耳机，想象声音中蕴藏的画面，选择最符合想象画面的描述 （需要您基于音频本身出发，不过度揣测的基础上进行想象）</h4>
+    <form action="/submit" method="post">
+
+        <div class="question">
+            <h2>1. 第一段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/250.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q1" value="A">A. 这段音频描绘了一条笼罩在阴云下的潮湿小径，声音暗示着下雨。雨滴的声响融入环境，营造出一种阴郁的氛围。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q1" value="B">B. 音频显示一个湿漉漉的篮球场，有多个篮筐，周围环绕着树木和草地。天空阴沉，暗示着刚下过雨。地面反射着灯光的光芒。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q1" value="C">C. 音频展示了一条城市街道，有现代建筑，其中有一栋建筑上有一块大招牌写着“华兴”。路上有汽车，行人正在行走，还有一个带有数字显示屏的公交车站。该场景看似是城市环境，可见一些绿化。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q1" value="D">D. 雨水使尘土飞扬的道路变得光滑，变成了一条泥泞的河流。一名独自骑自行车的人在倾盆大雨中穿行，用每个踏板泼水。在餐厅里，顾客们挤在一起，透过肮脏的窗户看着外面的风暴，杯子里冒出了蒸汽
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>2.第二段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/1045.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q2" value="A">A. 这段音频展现了一条熙攘的都市街道：在高架公路下方的繁忙道路上，汽车、摩托车等各类车辆川流不息。引擎的轰鸣声与轮胎摩擦路面的声响交织，勾勒出典型的热闹都市中车流密集的景象。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q2" value="B">B. 音频描绘了一个繁忙的城市街道场景，交通拥堵，包括汽车和摩托车。上方有高架道路，由混凝土柱支撑，下方街道两旁排列着众多商店。该区域充满活力，一侧有绿植，另一侧有彩色招牌。场景似乎位于一个亚洲城市，可能是台湾或类似的地方。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q2" value=C">C. 一辆破旧的车辆停靠在旧轨道旁，引擎寂静无声。锈迹爬满了凹陷的引擎盖。不远处，散落的板条箱暗示着一批被遗忘的货物。在头顶闪烁的工业灯光下，阴影被拉得很长。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q2" value="D">D. 音频显示一条湿漉漉的铺砌小路，两侧有草地。左侧立着一盏高高的路灯，天色阴沉，背景可见树木和建筑物。该场景似乎是一个公园或开阔区域的一部分。
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>3.第三段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/5359.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q3" value="A">A. 在昏暗的光线中，那只老旧的木箱里放着一卷褪色的羊皮纸卷轴。埃拉拉将其展开，开始朗声诵读，尽管房间里弥漫着紧张的气息，她的声音依然沉稳坚定。这是她的机会，让这份长期被压制、却藏着理解过去之关键的演讲稿得以重见天日。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q3" value="B">B. 音频显示一条湿漉漉的铺砌小路，两侧有草地。左边矗立着一盏高大的路灯，背景中可见树木和建筑物。天空阴沉，暗示着刚下过雨。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q3" value="C">C. 这段音频描绘了一条熙攘的城市街道，行人往来间交谈声此起彼伏，仿佛正沉浸于彼此的对话中。人群的谈笑声交织成一片，为这座都市图景更添了几分热闹鲜活的气息。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q3" value="D">D. 音频显示一个繁忙的城市广场，有行人来来往往，有些人坐在长椅上。可以看到一座大型女性雕像，以及建筑物和树木。场景背景是晴朗的蓝天，有些云朵。
+                </div>
+            </div>
+        </div>
+
+
+        <div class="question">
+            <h2>4.第四段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/3364.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q4" value="A">A. 这段音频展现了一座宁静的公园，人们沿着湖边小径漫步。阴云密布的天空暗示着可能是清晨或傍晚时分。人声的存在表明游客们正享受着悠闲的散步时光，或许在谈论当天的经历，或是计划着下一项活动。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q4" value="B">B. 音频展示了一个宁静的公园场景，一条铺砌的小路旁绿树成荫，通向一个湖泊。人们沿着小路行走，附近停放着一些自行车。气氛平静祥和。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q4" value="C">C. 老教授扶了扶眼镜，他的话语中满是古代历史的厚重感。在尘土飞扬的演讲厅里，学生们身体前倾，眼睛睁得大大的，完全被他通过精准讲述所编织的故事迷住了，全然忽略了远处时钟的嗡嗡声。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q4" value="D">D. 音频捕捉到宁静的日落景象，太阳正落在城市天际线之后，其中包括用于建筑设备的起重机。前景中有河流流淌，可见建筑物和桥梁。场景平和，日落为场景增添了暖意。
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>5.第五段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/1501.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q5" value="A">A. 这段音频描绘了一个繁忙的室内市场，各种摊位出售服装、厨具和食品等商品。人们在明亮的灯光下购物并与摊贩互动。气氛热烈，有中文标价的招牌标示价格和其他信息。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q5" value="B">B. 在一片静谧的公园中，人们沿着一条两旁长满茂密绿植与高大树木的小径漫步。树叶轻柔的沙沙声和远处的交谈声交织，营造出宁静祥和的氛围，而偶尔传来的笑声则为这幅图景增添了一抹愉悦的色彩。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q5" value="C">C. 音频显示一个公园，有大片开阔区域，有树木和草地。背景是几座高楼，天空晴朗。一个人正走在靠近路牌的草地上。场景平和且城市化。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q5" value="D">D. 鸡舍里一片家禽骚动。一只肥硕的公鸡昂首阔步地走着，对着逼近的雨势啼叫着发出挑战。母鸡们挤作一团，突如其来的倾盆大雨打乱了它们的羽毛，它们在泥泞的院子里疯狂地扒拉着散落的种子。
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>6.第六段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/5202.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q6" value="A">A. 音频展示了一幅西敏大桥的风景画面，背景可见大本钟和议会大厦。天空阴沉，有几个人行走在桥上。该场景捕捉了标志性的伦敦天际线，融合了现代和历史建筑。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q6" value="B">B. 这段音频勾勒出一幅滨水图景：一座灯塔矗立其间，一艘轮船停靠码头。平静的水面如镜面般倒映着天空，几位行人沿着海滨步道悠然漫步。背景中，鳞次栉比的建筑沿水岸延伸，暗示着附近便是繁华的城区。人声的浮现，仿佛人们正三三两两地交谈，或是享受着海滨漫步的闲适时光。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q6" value="C">C. 在一片寂静的画廊中，一个身影双手交叠伫立着，为即将发表的演讲做好了准备。投影图像在其身后闪烁，周围满是前倾的期待面孔，全场鸦雀无声。在话语最终响起之前，空气中弥漫着灼热的期待。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q6" value="D">D. 音频描绘了一个繁忙的城市街道场景，有各种商店，包括一家名为“Books & More”的书店。有行人行走，由于商店和标志的存在，气氛显得生动活泼。该场景设定在夜晚，有亮起的标志和建筑物。
+                </div>
+            </div>
+        </div>
+
+
+        <div class="question">
+            <h2>7.第七段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/2348.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q7" value="A">A. 音频展示了一家繁忙的电子产品商店，其中Acer、Lenovo和ASUS等各种品牌被显著陈列。顾客正在浏览商品，而其他人则在收银台排队。该商店布局干净有序，光线明亮，并设有中英文标识。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q7" value="B">B. 这段音频描绘了一家热闹的电子产品商店，人们正在浏览各种小电器。背景噪音中包含了顾客和店员之间的对话，营造出一种热闹的氛围。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q7" value="C">C. 音频显示一条湿滑的铺砌小路，两侧是草地，通向一座横跨在小水塘上的桥梁。天空阴沉，暗示刚刚下过雨。小路两侧可见树木，现场没有行人。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q7" value="D">D. 老演员练习着自己的台词，声音在空荡荡的剧院里轻轻回荡。一束光线刺破昏暗，尘埃在其中飞舞。他清了清嗓子，扶了扶眼镜，准备为看不见的观众献上表演。
+                </div>
+            </div>
+        </div>
+
+
+        <div class="question">
+            <h2>8.第八段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/8254.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q8" value="A">A. 一片宁静的公园，茂密的绿草与散落的树木为鸟儿轻柔的啁啾提供了静谧的背景。阴云密布的天空增添了一抹柔和的氛围，人们在开阔的原野间悠闲漫步，享受着这宁静的环境。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q8" value="B">B. 音频捕捉到宁静的日落景象，太阳正落在城市天际线之后，其中包括用于建筑设备的起重机。前景中有河流流淌，可见建筑物和桥梁。场景平和，日落为场景增添了暖意。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q8" value="B">B. 音频显示一个狭窄的、走廊般的空间，顶部高，一侧有大窗户。地面铺着瓷砖，有几个人沿着走廊的长度行走。外面看起来是晴天，窗户里能看见树木。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q8" value="D">D. 一只孤独的鸟儿栖息在斑驳的栅栏柱上，轻柔的微风拂乱了它的羽毛。下方，阳光斑驳的花园里，蜜蜂正嗡嗡地忙碌着。
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>9.第九段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/3139.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q9" value="A">A. 音频显示一片长满草的空地，散落着树叶，周围是树木和建筑物，天空阴沉。在建筑物附近可以看到几个人，这些建筑物似乎是公园或校园环境的一部分。场景平静开阔，暗示这是一个用于休闲或教育的公共场所。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q9" value="B">B. 在摇曳的烛光旁，老学者捧着那卷古老的典籍。他气息微颤，继而开口，声音似迟疑的低语。话语纷至沓来，每一字都承载着岁月的重量，这脆弱的言说，只为留存被遗忘的真相。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q9" value="C">C. 这段音频展现了一个熙熙攘攘的市场或购物区，人们往来穿梭、互动交流。人声的存在表明顾客们正在讨论商品或服务，或是提出相关问题。各类商品陈列其间，人们交谈甚欢，整个场景充满活力与生气。
+
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q9" value="D">D. 音频展示了一个繁忙的户外市场场景，人们四处走动，有些人戴着口罩。一名女子坐在桌旁，其他人则在摊位前浏览各式商品。场景显得生机勃勃、色彩缤纷，背景可见中国传统建筑。
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>10.第十段音频</h2>
+            <audio controls src="{{ url_for('static', filename='audio12/6043.wav') }}"></audio>
+            <div class="options">
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q10" value="A">A. 这段音频展现了一条熙熙攘攘的城市街道，行人沿着一栋建筑旁的人行道行走。随着人们各自忙碌着日常事务，谈话声此起彼伏。整个氛围热闹而充满活力，人们彼此互动，享受着周围的环境。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q10" value="B">B. 音频显示一群人走在靠近水体的人行道上，树木沿水边排列。场景看似户外，背景中可见一座跨水的桥梁或步道。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q10" value="C">C. 在摇曳的灯火旁，老人清了清嗓子，他的话音穿透静谧的房间，四下里满是期待。他的话语清晰而有力，缓缓地在一张张侧耳倾听的热切脸庞上，勾勒出一个故事的轮廓。
+                </div>
+                <div style="display: flex; font-size: 20px; margin-bottom: 10px">
+                    <input type="radio" name="q10" value="D">D. 音频描绘了一条夜晚熙熙攘攘的街道，两侧矗立着高大的建筑物。街道上布满了许多汽车，包括公共汽车，显示出交通繁忙。来自建筑物和路灯的明亮灯光照亮了这一场景，营造出充满活力的城市氛围。
+                </div>
+            </div>
+        </div>
+        <input style="margin-left: 45%" type="submit" name="action" value="submit1">
+    </form>
+
+</body>
+</html>

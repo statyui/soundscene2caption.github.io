@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .question {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            font-size: 2em;
+        }
+
+        .options {
+            margin-top: 20px;
+            display: block;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .options img {
+            margin-left: 20px;
+            width: 256px;
+            height: 256px;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            height: 40px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.5em;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Questionnaire</h1>
+    <h4>
+        Please carefully listen to each audio clip (1–10), preferably using headphones.
+        Imagine the scene conveyed by the sound and select the description that best matches your imagination.
+        Base your judgment on the audio itself without over-interpreting.
+    </h4>
+
+    <form action="/submit" method="post">
+
+        <!-- Q1 -->
+        <div class="question">
+            <h2>1. Audio Clip 1</h2>
+            <audio controls src="./audio12/250.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q1" value="A"> A. The audio depicts a damp pathway shrouded under overcast skies, with acoustic cues suggesting rainfall. The sound of raindrops is integrated into the environment, collectively contributing to a somber and subdued atmospheric tone.</div>
+                <div><input type="radio" name="q1" value="B"> B. The audio conveys a wet basketball court featuring multiple hoops, surrounded by trees and grassy areas. The sky appears overcast, implying recent rainfall. Reflections of artificial lighting are visible on the ground surface.</div>
+                <div><input type="radio" name="q1" value="C"> C. The audio presents an urban street scene characterized by modern architectural structures, including a building bearing a prominent sign labeled “Huaxing.” The roadway accommodates vehicular traffic, while pedestrians are observed in motion. Additionally, a bus stop equipped with a digital display panel is present. The setting is indicative of an urban environment with elements of greenery.</div>
+                <div><input type="radio" name="q1" value="D"> D. The audio shows a dusty road transformed by rainfall into a smooth, muddy stream-like surface. A solitary cyclist traverses the scene amid heavy downpour, with each pedal stroke displacing water. Inside a restaurant, patrons are densely gathered, observing the storm through soiled windows, while steam rises from their cups.</div>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question">
+            <h2>2. Audio Clip 2</h2>
+            <audio controls  src="./audio12/1045.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q2" value="A"> A. This audio depicts a bustling urban street: beneath an elevated roadway, a busy road carries a continuous flow of vehicles, including cars and motorcycles. The roaring of engines intertwines with the frictional sounds of tires against the pavement, delineating a typical scene of dense traffic in a lively metropolitan environment.</div>
+                <div><input type="radio" name="q2" value="B"> B. The audio portrays a busy urban street scene with heavy traffic congestion, including cars and motorcycles. An elevated roadway supported by concrete pillars extends overhead, while numerous shops line both sides of the street below. The area is vibrant, with greenery on one side and colorful signage on the other. The scene appears to be located in an Asian city, possibly Taiwan or a similar region.</div>
+                <div><input type="radio" name="q2" value="C"> C. A dilapidated vehicle is parked beside an old railway track, its engine silent. Rust has spread across the dented hood. Not far away, scattered crates suggest a consignment that has been long abandoned. Under flickering industrial lighting overhead, shadows are cast into elongated forms.</div>
+                <div><input type="radio" name="q2" value="D"> D. The audio presents a wet paved pathway flanked by grassy areas on both sides. A tall streetlamp stands on the left, while the sky is overcast, with trees and buildings visible in the background. The scene appears to be part of a park or an open area.</div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question">
+            <h2>3. Audio Clip 3</h2>
+            <audio controls src="./audio12/5359.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q3" value="A"> A. In dim lighting, an old wooden chest contains a faded parchment scroll. Elara unrolls it and begins to read aloud; despite the tension permeating the room, her voice remains steady and resolute. This is her opportunity to bring to light a long-suppressed speech that holds the key to understanding the past.</div>
+                <div><input type="radio" name="q3" value="B"> B. The audio shows a wet paved pathway flanked by grassy areas on both sides. A tall streetlamp stands on the left, while trees and buildings are visible in the background. The sky is overcast, suggesting that it has recently rained.</div>
+                <div><input type="radio" name="q3" value="C"> C. This audio segment shows a bustling urban street, where pedestrians move about as overlapping conversations rise and fall, as if individuals are immersed in their own exchanges. The interwoven sounds of chatter and laughter contribute to a vivid and lively urban atmosphere.</div>
+                <div><input type="radio" name="q3" value="D"> D. The audio shows a busy urban square with pedestrians moving about, some seated on benches. A large statue of a woman is visible, along with surrounding buildings and trees. The scene is set under a clear blue sky with scattered clouds.</div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question">
+            <h2>4. Audio Clip 4</h2>
+            <audio controls src="./audio12/3364.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q4" value="A"> A. This audio segment depicts a tranquil park where people stroll along a lakeside pathway. The overcast sky suggests either early morning or late evening. The presence of human voices indicates that visitors are enjoying a leisurely walk, perhaps discussing the day’s experiences or planning their next activities.</div>
+                <div><input type="radio" name="q4" value="B"> B. The audio depicts a quiet park scene, with a paved pathway lined with lush trees leading toward a lake. People walk along the path, and several bicycles are parked nearby. The overall atmosphere is calm and peaceful.</div>
+                <div><input type="radio" name="q4" value="C"> C. The elderly professor adjusts his glasses, his speech imbued with the weight of ancient history. In the dust-filled lecture hall, students lean forward with widened eyes, completely captivated by the narratives he weaves through precise and vivid storytelling, oblivious to the faint humming of a distant clock.</div>
+                <div><input type="radio" name="q4" value="D"> D. The audio captures a tranquil sunset scene, with the sun setting behind a city skyline that includes construction cranes. A river flows in the foreground, while buildings and a bridge are visible. The atmosphere is serene, with the sunset casting a warm tone over the entire scene.</div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question">
+            <h2>5. Audio Clip 5</h2>
+            <audio controls src="./audio12/1501.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q5" value="A"> A. This audio segment depicts a busy indoor market, where various stalls sell goods such as clothing, kitchenware, and food. People shop under bright lighting and interact with vendors. The atmosphere is lively, with signs displaying prices and other information in Chinese.</div>
+                <div><input type="radio" name="q5" value="B"> B. In a tranquil park, people stroll along a pathway lined with dense greenery and tall trees on both sides. The gentle rustling of leaves intertwines with distant conversations, creating a calm and peaceful atmosphere, while occasional laughter adds a touch of pleasantness to the scene.</div>
+                <div><input type="radio" name="q5" value="C"> C. The audio presents a park with a large open area, featuring trees and grass. Several high-rise buildings are visible in the background under a clear sky. A person is walking on the grass near a signpost. The scene is calm yet urban in character.</div>
+                <div><input type="radio" name="q5" value="D"> D. The chicken coop is filled with the restless movement of poultry. A stout rooster strides forward with its head held high, crowing in defiance at the approaching rain. Hens cluster together as the sudden downpour ruffles their feathers, while they frantically scratch at scattered seeds in the muddy yard.</div>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question">
+            <h2>6. Audio Clip 6</h2>
+            <audio controls src="./audio12/5202.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q6" value="A"> A. The audio presents a scene of Westminster Bridge, with Big Ben and the Houses of Parliament visible in the background. The sky is overcast, and several people are walking along the bridge. The scene captures the iconic London skyline, blending modern and historic architectural elements.</div>
+                <div><input type="radio" name="q6" value="B"> B. This audio segment delineates a waterfront setting: a lighthouse stands prominently, and a ship is moored at the dock. The calm water mirrors the sky, while several pedestrians stroll leisurely along the seaside promenade. In the background, densely arranged buildings extend along the shoreline, suggesting the proximity of a bustling urban district. The emergence of human voices evokes small groups engaged in conversation or enjoying a relaxed coastal walk.</div>
+                <div><input type="radio" name="q6" value="C"> C. In a silent gallery, a figure stands with hands clasped, preparing to deliver an imminent speech. Projected images flicker behind them, while the surrounding audience leans forward in anticipation, rendering the space completely hushed. Before the speech begins, the air is charged with an intense sense of expectation.</div>
+                <div><input type="radio" name="q6" value="D"> D. The audio depicts a busy urban street scene featuring a variety of shops, including a bookstore named “Books & More.” Pedestrians move along the street, and the presence of storefronts and signage contributes to a lively atmosphere. The scene is set at night, with illuminated signs and buildings enhancing the overall vibrancy.</div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="question">
+            <h2>7. Audio Clip 7</h2>
+            <audio controls src="./audio12/2348.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q7" value="A"> A. The audio presents a busy electronics store in which brands such as Acer, Lenovo, and ASUS are prominently displayed. Customers are browsing products, while others queue at the checkout counters. The store layout is clean and well-organized, with bright lighting and signage in both Chinese and English.</div>
+                <div><input type="radio" name="q7" value="B"> B. This audio segment depicts a lively electronics store, where people are browsing various small electronic devices. Background noise includes conversations between customers and staff, contributing to a bustling atmosphere.</div>
+                <div><input type="radio" name="q7" value="C"> C. The audio shows a wet and slippery paved pathway flanked by grassy areas, leading toward a bridge spanning a small pond. The sky is overcast, suggesting recent rainfall. Trees are visible along both sides of the path, and no pedestrians are present.</div>
+                <div><input type="radio" name="q7" value="D"> D. An elderly actor rehearses his lines, his voice softly echoing through an empty theater. A beam of light cuts through the dimness, with dust particles drifting within it. He clears his throat and adjusts his glasses, preparing to perform for an unseen audience.</div>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="question">
+            <h2>8. Audio Clip 8</h2>
+            <audio controls src="./audio12/8254.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q8" value="A"> A. A tranquil park unfolds, where lush green grass and scattered trees provide a serene backdrop to the gentle chirping of birds. The overcast sky adds a softened tone to the atmosphere, as people stroll leisurely across the open grounds, enjoying the peaceful surroundings.</div>
+                <div><input type="radio" name="q8" value="B"> B. The audio captures a tranquil sunset scene, with the sun descending behind a city skyline that includes construction cranes. A river flows in the foreground, while buildings and a bridge are visible. The overall atmosphere is calm, with the sunset casting a warm hue over the scene.</div>
+                <div><input type="radio" name="q8" value="C"> C. The audio presents a narrow, corridor-like space with a high ceiling and large windows along one side. The floor is tiled, and several people walk along the length of the corridor. Outside, the weather appears clear, with trees visible through the windows.</div>
+                <div><input type="radio" name="q8" value="D"> D. A solitary bird perches on a weathered fence post, its feathers gently ruffled by a light breeze. Below, in a sun-dappled garden, bees buzz busily about.</div>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="question">
+            <h2>9. Audio Clip 9</h2>
+            <audio controls src="./audio12/3139.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q9" value="A"> A. The audio presents a grassy open area scattered with fallen leaves, surrounded by trees and buildings under an overcast sky. Several individuals can be seen near the buildings, which appear to be part of a park or campus environment. The scene is calm and expansive, suggesting a public space used for leisure or educational purposes.</div>
+                <div><input type="radio" name="q9" value="B"> B. By the flickering candlelight, an elderly scholar holds an ancient manuscript. His breath trembles slightly before he begins to speak, his voice resembling a hesitant whisper. Words follow in succession, each carrying the weight of time; this fragile act of narration seeks to preserve a truth long forgotten.</div>
+                <div><input type="radio" name="q9" value="C"> C. This audio segment depicts a bustling market or shopping area, where people move about and interact with one another. The presence of human voices suggests that customers are discussing goods or services, or raising related inquiries. Various products are displayed, and lively conversations contribute to an atmosphere full of energy and vitality.</div>
+                <div><input type="radio" name="q9" value="D"> D. The audio presents a busy outdoor market scene, where people move around, some wearing masks. A woman is seated at a table, while others browse a variety of goods at nearby stalls. The setting appears vibrant and colorful, with traditional Chinese architecture visible in the background.</div>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="question">
+            <h2>10. Audio Clip 10</h2>
+            <audio controls src="./audio12/6043.wav"></audio>
+            <div class="options">
+                <div><input type="radio" name="q10" value="A"> A. This audio segment depicts a bustling urban street, where pedestrians walk along a sidewalk adjacent to a building. Conversations rise and fall as people attend to their daily routines. The overall atmosphere is lively and dynamic, with individuals interacting and engaging with their surroundings.</div>
+                <div><input type="radio" name="q10" value="B"> B. The audio presents a group of people walking along a pathway near a body of water, with trees lining the waterfront. The setting appears to be outdoors, and a bridge or walkway spanning the water is visible in the background.</div>
+                <div><input type="radio" name="q10" value="C"> C. By flickering lamplight, the elderly man clears his throat, his voice cutting through the quiet room filled with anticipation. His speech is clear and resonant, gradually sketching the outline of a story across the attentive faces of listeners leaning in to hear.</div>
+                <div><input type="radio" name="q10" value="D"> D. The audio depicts a bustling street at night, flanked by tall buildings on both sides. The road is filled with numerous vehicles, including buses, indicating heavy traffic. Bright lights from buildings and streetlamps illuminate the scene, creating a vibrant urban atmosphere.</div>
+            </div>
+        </div>
+
+        <input style="margin-left: 45%" type="submit" name="action" value="Submit">
+    </form>
+
+</body>
